@@ -14,7 +14,7 @@ Before running the app the media must be prepared, and then copied to the app me
 ### Media Preparation
 
 1. place all video files in `media-preparation/media-in`
-2. open a terminal in media-preparation and run	`npx run prepare-media`
+2. open a terminal in media-preparation and run	`npm run prepare-media`
 	```
 	- the media-out directory should look like this
 		```
@@ -25,4 +25,8 @@ Before running the app the media must be prepared, and then copied to the app me
 		|__2.mp4
 		...
 		```
-3. now run `npx run copy-to-server`
+3. now run `npm run copy-to-server`
+
+### Running the server
+
+1. cd to `site` and run `npm run serve`
