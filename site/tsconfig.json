@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist/",
+		// "noImplicitAny": true,
+		"lib": [
+			"es6",
+			"dom"
+		],
+		"moduleResolution": "node",
+		"noImplicitAny": false, //leave me alone!
+		"noImplicitThis": true,
+		"strictNullChecks": false, //object is possibly undefined
+		"module": "es6",
+		"target": "es6",
+		"jsx": "react",
+		"sourceMap": true,
+		"allowJs": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"resolveJsonModule": true
+	}
+}
