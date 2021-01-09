@@ -73,7 +73,15 @@ export const Home = () => {
 					</TableHead>
 					<TableBody>
 						{metadata.map((entry, index) => {
-							return <TableRow key={index} onClick={e => set_currentVideo(entry)}>
+							return <TableRow key={index}
+								onClick={e => set_currentVideo(entry)}
+								style={{
+
+									// "&:hover": {
+									// 	backgroundColor: "#000000"
+									// }
+								}}
+							>
 								{/* <Button > */}
 								<TableCell>{entry.fileName}</TableCell>
 								<TableCell align="right">{(entry.duration / 60).toFixed(2)}</TableCell>
@@ -88,7 +96,7 @@ export const Home = () => {
 
 	return (
 		<>
-			<Typography variant="h1" className={globalClasses.title}>MeTube</Typography>
+			<Typography variant="h1" className={globalClasses.title}>MeTubes</Typography>
 			<div style={{
 				display: 'grid',
 				gridTemplateColumns: '2.5fr 5fr 2.5fr'

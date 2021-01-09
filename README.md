@@ -1,6 +1,5 @@
 
 
-
 ## Dependencies
 - node `choco install nodejs`
 - ffmpeg `choco install ffmpeg`
