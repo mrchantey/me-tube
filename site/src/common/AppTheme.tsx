@@ -125,6 +125,7 @@ function useAppTheme(): Theme {
 			// secondary
 		},
 		typography: {
+			fontSize: 40,
 			button: {
 				textTransform: 'none'
 			},
@@ -178,8 +179,8 @@ const AppTheme = (props: any) => {
 		window.addEventListener('resize', handleResize)
 		//CALL ON INIT
 		handleResize()
-		if (window.innerWidth >= windowPersistentDrawerWidth)
-			set_appTheme(state => ({ ...state, menuDrawerOpen: true }))
+		// if (window.innerWidth >= windowPersistentDrawerWidth)
+		// 	set_appTheme(state => ({ ...state, menuDrawerOpen: true }))
 
 		return () => window.removeEventListener('resize', handleResize)
 	}, [])

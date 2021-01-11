@@ -4,6 +4,7 @@ import { Layout } from '../layout/Layout';
 import { Home } from '../pages/Home';
 import { NotFound } from '../pages/NotFound';
 
+const reload = () => window.location.reload();
 
 const AppRouter = () => {
 
@@ -15,6 +16,7 @@ const AppRouter = () => {
 			{/* <Route path="/on-sign-in" component={() => { props.history.goBack(); return null }} /> */}
 			<Route path="/terms-of-service" component={() => <div>we own you</div>} />
 			<Route path="/privacy-policy" component={() => <div>we sell it</div>} />
+			<Route path="/media/0.mp4" onEnter={reload} />
 			<Route component={() => <NotFound />} />
 		</Switch>
 	)

@@ -55,6 +55,7 @@ const MenuDrawer = () => {
 	const classes = useStyles()
 	const globalClasses = useGlobalStyles()
 
+
 	const MultiDrawer = (props: any) => {
 
 		return themeState.menuDrawerPermanent ?

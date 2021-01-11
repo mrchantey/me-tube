@@ -22,7 +22,8 @@ Before running the app the media must be prepared, and then copied to the app me
 
 1. place all video files in `media-preparation/media-in` (file names and subdirectories are unimportant)
 2. `cd media-preparation`
-2. `npm run prepare-media`
+3. `npm run prepare-media` 
+	- also available is `npm run prepare-media-hwacc` for approx 5x boost and free up CPU (requires NVIDIA GPU)
 	- the media-out directory should look like this
 		```
 		media-out
@@ -32,7 +33,7 @@ Before running the app the media must be prepared, and then copied to the app me
 		|__2.mp4
 		...
 		```
-3. now run `npm run copy-to-server`
+4. now run `npm run copy-to-server`
 
 ### Running the server
 

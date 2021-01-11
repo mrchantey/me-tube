@@ -5,6 +5,7 @@ module.exports = {
 	mode: "development",
 	devtool: 'inline-source-map',
 	devServer: {
+		// http2: true,
 		contentBase: './dist',
 		historyApiFallback: true,
 		open: false,
