@@ -37,9 +37,9 @@ export const Home = () => {
 		return () => { }
 	}
 
-	function updateViewedItems(index: number) {
+	function updateViewedItems(index: number, status = true) {
 		set_viewedItems(curr => {
-			curr[index] = true
+			curr[index] = status
 			localStorage.setItem(storageKey, JSON.stringify(curr))
 			return curr
 		})
