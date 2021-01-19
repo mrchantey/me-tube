@@ -14,18 +14,21 @@ import { iViewedItems } from './Home';
 interface iProps {
 	metadata: Array<iVideo>,
 	viewedItems: iViewedItems,
-	updateViewedItems: (number, boolean?) => void
+	updateViewedItems: (number, boolean?) => void,
+	handleView: (number) => void
 }
 
 
-export const VideoList = ({ metadata, viewedItems, updateViewedItems }: iProps) => {
-
-
+export const VideoList = ({ metadata, viewedItems, updateViewedItems, handleView }: iProps) => {
 
 	const classes = makeStyles(theme => ({
+		tableBody: {
+		},
 		tableRow: {
-			// minHeight: '100px',
-			backgroundColor: theme.palette.background.paper,
+			height: '10vh',
+			"&:nth-child(even)": { backgroundColor: theme.palette.background.paper },
+			"&:nth-child(odd)": { backgroundColor: theme.palette.action.disabledBackground },
+			// backgroundColor: theme.palette.background.paper,
 			"&:hover": {
 				cursor: 'pointer',
 				backgroundColor: theme.palette.action.hover,
@@ -33,14 +36,10 @@ export const VideoList = ({ metadata, viewedItems, updateViewedItems }: iProps) 
 			"&:active": {
 				cursor: 'pointer',
 				backgroundColor: theme.palette.action.active,
-			}
+			},
 		}
 	}))()
 
-	function handleView(index: number) {
-		updateViewedItems(index)
-		window.location.href = `${window.location.href}media/${index}.mp4`
-	}
 	const [key, set_key] = React.useState(0)
 
 	return <TableContainer component={Paper}>
@@ -52,7 +51,7 @@ export const VideoList = ({ metadata, viewedItems, updateViewedItems }: iProps) 
 					<TableCell align="right">Watched</TableCell>
 				</TableRow>
 			</TableHead>
-			<TableBody>
+			<TableBody className={classes.tableBody}>
 				{metadata.map((entry, index) => {
 
 
